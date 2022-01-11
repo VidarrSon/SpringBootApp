@@ -6,5 +6,5 @@ import train2middle.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    boolean deleteUserById(Long id);
+    Long deleteUserById(Long id);
 }

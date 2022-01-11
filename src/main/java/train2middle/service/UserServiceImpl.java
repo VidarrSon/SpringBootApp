@@ -1,6 +1,5 @@
 package train2middle.service;
 
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import train2middle.entity.User;
@@ -30,13 +29,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto create(UserDto userDto) {
         User user = toEntity(userDto);
-        userRepository.save(user);
-        return toDto(user);
+        return toDto(userRepository.save(user));
     }
 
     @Override
     public boolean delete(Long id) {
-        return userRepository.deleteUserById(id);
+        return userRepository.deleteUserById(id) > 0;
     }
 
     private User toEntity (UserDto userDto) {
