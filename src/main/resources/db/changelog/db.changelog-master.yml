@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Oleksandr
+      changes:
+        - createTable:
+            tableName: users2
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+
+  - changeSet:
+      id: 2
+      author: Oleksandr
+      changes:
+        - addColumn:
+            tableName: users2
+            columns:
+              - column:
+                  name: address
+                  type: varchar(255)
