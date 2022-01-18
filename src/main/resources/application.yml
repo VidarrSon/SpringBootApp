@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testspringdb
+    driverClassName: org.h2.Driver
+    username: oleksandr
+    password: aaaa
+
+  liquibase:
+    change-log: /db/changelog/db.changelog-master.yml
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: none
+
+  h2:
+    console:
+      enabled: true
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    username: oblocal
+    password: llll
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  datasource:
+    username: obdev
+    password: dddd
+
+---
+spring:
+  config:
+    activate:
+      on-profile: stg
+
+  datasource:
+    username: obstg
+    password: ssss
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+
+  datasource:
+    username: obprod
+    password: pppp
