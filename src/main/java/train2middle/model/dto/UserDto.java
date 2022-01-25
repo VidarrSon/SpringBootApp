@@ -1,4 +1,4 @@
-package train2middle.entity;
+package train2middle.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

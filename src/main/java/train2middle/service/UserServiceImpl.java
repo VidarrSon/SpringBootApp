@@ -2,8 +2,8 @@ package train2middle.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import train2middle.entity.User;
-import train2middle.entity.UserDto;
+import train2middle.model.entity.User;
+import train2middle.model.dto.UserDto;
 import train2middle.exception.UserNotFoundException;
 import train2middle.repository.UserRepository;
 

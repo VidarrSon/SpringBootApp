@@ -1,7 +1,7 @@
 package train2middle.service;
 
-import train2middle.entity.User;
-import train2middle.entity.UserDto;
+import train2middle.model.entity.User;
+import train2middle.model.dto.UserDto;
 
 import java.util.List;
 
